@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arseniy Zhelvakov</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="container">
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-body border-info" id="profile-wrapper">
+                    <img id="profile-pic"src="{% static 'images/photo.jpg' %}" alt="">
+                    <hr>
+                    <h4>Hi, I'm Arseniy!</h4>
+                    <p>I love coding</p>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="card card-body border-info">
+                    <h4>Trainee Python Developer</h4>
+                    <hr>
+                    <P>When I was 11 years old, I bought my first book on programming.
+                        It was "First Head programming in Python", then I first touched programming languages and got carried away with this topic.
+                        Then at school I went to a programming class, where I continued to study python and participate in various Olympiads.
+                        Since then, I have read many books and articles, actively developed networking and followed IT trends.</P>
+                    <P>I really love coding, so I decided to try to find my first job. I think I have a lot of experience to try to enter the IT-industry</P>
+                    <hr>
+                    <ul class="social-links">
+                        <li class="social"><a href="https://github.com/ArseniyZh" target="_blank"><img class="social-pic" src="{% static 'images/github.png' %}" alt=""></a></li>
+                        <li class="social"><a href="https://t.me/ytrisa" target="_blank"><img class="social-pic" src="{% static 'images/telegram.png' %}" alt=""></a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card card-body h-100">
+                    <h4>My Experience as a Developer</h4>
+                    <hr>
+                    <p>I don't have any commercial development experience yet, but I have enough github projects that confirm my knowledge.
+                        I am also proud of my development experience in an amateur project at an IT school.
+                        There we developed a mechanical prosthetic arm on arduino, and I was the lead developer.
+                        I developed a GUI interface for interacting with the prosthesis, learned how to write technical specifications and solve extraordinary tasks.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card card-body h-100 border-success">
+                    <h4>What I Know</h4>
+                    <hr>
+                    <p>Python, HTML, CSS, PostgreSQL, SQLite, Docker, TKinter and many APIs</p>
+                    <p>PS: Hard working on Django :)</p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md">
+                <div class="card card-body text-center">
+                    <h4>Why Me?</h4>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card card-body border-primary">
+                                <h4>Well-developed soft-skills</h4>
+                                <p>While at school, I actively participated in all events, competitions and Olympiads.
+                                    It was at school that I gained invaluable experience of performing in a variety of project competitions where I needed to defend my own project.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card card-body border-primary">
+                                <h4>Good learning ability</h4>
+                                <p>I noticed that if I like something, then I will study it thoroughly.
+                                    Programming is exactly what I want to do, so I am actively studying this area and new material is easily given to me.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="card card-body border-primary">
+                                <h4>Personal achievements and qualities</h4>
+                                <p>I received a basic general education with honors in the profile "Computer Science"
+                                    <br>Efficiency, sociability, purposefulness, stress resistance,
+                                    the ability to work in a team, discipline, accuracy, the desire to study
+                                    new material.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <div class="col-md">
+                <div class="card card-body text-center">
+                    <h4>My Favorite Projects</h4>
+                    <hr>
+
+                    <div class="row">
+                            {% for project in projects %}
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <h5 class="card-header text-center">{{project.title}}</h5>
+                                    <div class="card-body">
+                                        <h5 class="text-center">{{project.subtitle}}</h5>
+                                        <p class="text-start">{{project.description}}</p>
+                                        <hr>
+
+                                        <p class="text-center">What I Learned</p>
+                                        <p class="text-start">{{project.learn_description}}</p>
+                                        <hr>
+
+                                        <p class="text-center">Technology Stack</p>
+                                        <p class="text-start">{{project.stack}}</p>
+
+                                        <a href="{{project.source_link}}" class="btn btn-primary" target="_blank">See</a>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                            {% endfor %}
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <br>
+    </div>
+</body>
+</html>

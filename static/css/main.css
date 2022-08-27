@@ -1,0 +1,38 @@
+body {
+    background: rgb(255,255,238)!important;
+    background: linear-gradient(90deg, rgba(255, 255, 232, 0.5) 0%, rgba(254, 241, 255, 0.5) 60%, rgba(255, 242, 242, 0.5) 100%)!important;
+    background: white!important;
+}
+
+
+#profile-wrapper {
+    text-align: center;
+}
+
+#profile-pic {
+    border-radius: 10%;
+}
+
+ul {
+    margin: auto;
+    list-style-type: none;
+}
+
+.social-links ul, li {
+    list-style-type: none;
+    display: inline-block;
+}
+.social-pic {
+    width: 40px;
+    height: 40px;
+}
+
+#Monomach_marks-header {
+    background: rgba(255, 0, 0, 0.10)!important;
+}
+#Hippodrome-header {
+    background: rgba(251, 255, 0, 0.1)!important;
+}
+#google_sheets-header {
+    background: rgba(0, 255, 42, 0.1)!important;
+}
